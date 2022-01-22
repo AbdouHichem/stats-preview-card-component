@@ -1,7 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap");
+
+:root {
+  --VerydarkblueMainbg: hsl(233, 47%, 7%);
+  --DarkdesaturatedblueCardbg: hsl(244, 38%, 16%);
+  --Softviolet: hsl(277, 64%, 61%);
+  --White: hsl(0, 0%, 100%);
+  --Slightlytransparentwhiteparagraph: hsla(0, 0%, 100%, 0.75);
+  --Slightlytransparentwhiteheadings: hsla(0, 0%, 100%, 0.6);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  flex-direction: column;
+  text-align: center;
+  background-color: var(--VerydarkblueMainbg);
+}
+.container {
+  background-color: var(--DarkdesaturatedblueCardbg);
+  border-radius: 16px;
+  width: 350px;
+  margin-bottom: 20px;
+  font-family: inter, sans-serif;
+  .head {
+      
+    img {
+      width: 100%;
+      display: block;
+    }
+  }
+  .body {
+    .title {
+      color: var(--White);
+      font-family: Lexend Deca;
+
+      span {
+        color: var(--Softviolet);
+      }
+      margin: 24px;
+    }
+    .details {
+      color: var(--Slightlytransparentwhiteparagraph);
+      opacity: 0.6;
+      margin: 24px;
+      font-weight: 400;
+      line-height: 1.5;
+    }
+    .statistics {
+      color: var(--Slightlytransparentwhiteheadings);
+      text-transform: uppercase;
+
+      p {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin: 20px 0px;
+        opacity: 0.8;
+        font-size: 0.8em;
+        span {
+          color: var(--White);
+          font-weight: bold;
+          font-size: 1.8em;
+          margin-bottom : 10px;
+        }
+      }
+    }
+  }
+}
+
 .attribution {
   font-size: 11px;
   text-align: center;
+  color: var(--White);
+  font-size: 0.8em;
 }
 .attribution a {
-  color: hsl(228, 45%, 44%);
+  color: rgb(167, 177, 221);
 }
