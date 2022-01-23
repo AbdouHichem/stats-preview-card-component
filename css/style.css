@@ -136,9 +136,11 @@ body {
     max-width: 80%;
     width: 80%;
     text-align: left;
+    border-radius: 8px;
     height: 55vh;
   }
   .container .head {
+    border-radius: 0 8px 8px 0;
     background: url(../images/image-header-desktop.jpg) no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -170,9 +172,6 @@ body {
             justify-content: space-between;
     text-align: left;
     margin: 0px 24px;
-  }
-  .statistics p {
-    margin: 0;
   }
 }
 /*# sourceMappingURL=style.css.map */
