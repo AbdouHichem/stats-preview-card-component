@@ -3,7 +3,7 @@
 :root {
   --VerydarkblueMainbg: hsl(233, 47%, 7%);
   --DarkdesaturatedblueCardbg: hsl(244, 38%, 16%);
-  --Softviolet: hsl(277, 64%, 61%);
+  --Softviolet: hsl(277, 41%, 42%);
   --White: hsl(0, 0%, 100%);
   --Slightlytransparentwhiteparagraph: hsla(0, 0%, 100%, 0.75);
   --Slightlytransparentwhiteheadings: hsla(0, 0%, 100%, 0.6);
@@ -26,26 +26,45 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 100vh;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  min-height: 100vh;
   text-align: center;
   background-color: var(--VerydarkblueMainbg);
 }
 
 .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   background-color: var(--DarkdesaturatedblueCardbg);
   border-radius: 16px;
-  width: 350px;
+  width: 70%;
+  max-width: 400px;
   margin-bottom: 20px;
   font-family: inter, sans-serif;
 }
 
-.container .head img {
+.container .head {
+  background: url(../images/image-header-mobile.jpg) no-repeat;
   width: 100%;
-  display: block;
+  height: 40vh;
+  background-size: 100% 100%;
+  background-position: center;
+  background-blend-mode: overlay;
+  background-color: var(--Softviolet);
 }
 
 .container .body .title {
@@ -103,5 +122,57 @@ body {
 
 .attribution a {
   color: #a7b1dd;
+}
+
+@media only screen and (min-width: 967px) {
+  body {
+    min-height: 88vh;
+  }
+  .container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    max-width: 80%;
+    width: 80%;
+    text-align: left;
+    height: 55vh;
+  }
+  .container .head {
+    background: url(../images/image-header-desktop.jpg) no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: var(--Softviolet);
+    height: 100%;
+    max-width: 50%;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .container .body {
+    margin: 10px 30px;
+    max-width: 50%;
+  }
+  .container .body .title {
+    font-size: 30px;
+  }
+  .statistics {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    text-align: left;
+    margin: 0px 24px;
+  }
+  .statistics p {
+    margin: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */

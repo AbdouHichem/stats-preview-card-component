@@ -4,7 +4,7 @@
 :root {
   --VerydarkblueMainbg: hsl(233, 47%, 7%);
   --DarkdesaturatedblueCardbg: hsl(244, 38%, 16%);
-  --Softviolet: hsl(277, 64%, 61%);
+  --Softviolet: hsl(277, 41%, 42%);
   --White: hsl(0, 0%, 100%);
   --Slightlytransparentwhiteparagraph: hsla(0, 0%, 100%, 0.75);
   --Slightlytransparentwhiteheadings: hsla(0, 0%, 100%, 0.6);
@@ -20,23 +20,31 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
   flex-direction: column;
+  min-height: 100vh;
   text-align: center;
   background-color: var(--VerydarkblueMainbg);
 }
 .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   background-color: var(--DarkdesaturatedblueCardbg);
   border-radius: 16px;
-  width: 350px;
+  width: 70%;
+  max-width: 400px;
   margin-bottom: 20px;
   font-family: inter, sans-serif;
   .head {
-      
-    img {
-      width: 100%;
-      display: block;
-    }
+    background: url(../images/image-header-mobile.jpg) no-repeat;
+    
+    width: 100%;
+    height: 40vh;
+    background-size: 100% 100%;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: var(--Softviolet);
   }
   .body {
     .title {
@@ -70,7 +78,7 @@ body {
           color: var(--White);
           font-weight: bold;
           font-size: 1.8em;
-          margin-bottom : 10px;
+          margin-bottom: 10px;
         }
       }
     }
@@ -85,4 +93,50 @@ body {
 }
 .attribution a {
   color: rgb(167, 177, 221);
+}
+@media only screen and(min-width: 967px) {
+ 
+body{
+  min-height:88vh;
+}
+  .container {
+    flex-direction: row;
+    max-width: 80%;
+    width: 80%;
+    text-align: left;
+
+    height:55vh;
+    .head{
+
+    background: url(../images/image-header-desktop.jpg) no-repeat;
+
+    background-size: 100% 100%;
+    background-position: center;
+    background-blend-mode: overlay;
+    background-color: var(--Softviolet);
+    
+      height:100%;
+      max-width:50%;
+      order: 1;
+    }
+    .body{
+      margin: 10px 30px;
+      max-width:50%;
+      .title {
+       font-size:30px;
+      }
+    }
+  }
+
+  .statistics {
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    margin: 0px 24px;
+    p{
+      margin: 0;
+    }
+    
+  }
 }
